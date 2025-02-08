@@ -20,8 +20,8 @@ Plan&Do is a **simple, efficient, and visually appealing** **To-Do List** applic
  ┣ 📜 index.html   # Main structure of the app  
  ┣ 📜 style.css    # Styling and UI improvements  
  ┣ 📜 app.js       # JavaScript functionality  
- ┣ 📜 bg_image.jpg # Background image (if applicable)  
+ ┣ 📜 bg_image.jpg # Background image 
  ┗ 📜 README.md    # Documentation  
+---
 
-## 🔗 Live Demo  
-[🚀 View Plan&Do Online](https://plan-do.vercel.app/)  
+
