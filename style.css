@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+h1{
+    font-family: "Poppins", serif;
+}
+
+/* to middle all the content */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Inter", serif;
+} 
+
+/* to set background imagae */
+body::before{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg_image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    filter: blur(3px);
+}
+
+.main_container{
+    width: 800px;
+    /* height: 100px; */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    
+}
+
+.title{
+    padding: 10px;
+    border-bottom: 5px solid #fc0;
+    border-radius: 20px;
+
+}
+.title h1 {
+    font-family: "Poppins", sans-serif;
+    color: #1E3A8A;
+}
+
+
+.task_form{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task_form input {
+    width: 80%;
+    height: 35px;
+    padding: 0 20px;
+    border: 2px solid #2563EB;
+    border-radius: 50px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+.task_form input:focus {
+    border-color: #3B82F6;
+    box-shadow: 0px 0px 5px rgba(59, 130, 246, 0.5);
+}
+
+
+
+.task_form button{
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 50px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: #10B981;
+    font-weight: bold;
+    font-family: "Inter", serif;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+
+}
+
+.task_form button:hover{
+    transform: scale(1.1);
+    background-color: #059669;
+}
+
+.task_table_header{
+    padding: 0 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fc0;
+    margin-bottom: 20px;
+
+
+}
+
+.task_table_header h4{
+    font-size: 20px;
+    font-family: "Poppins", serif;
+}
+
+.delete_All{
+    background-color: #B91C1C;
+    border: none;
+    padding: 7px 20px;
+    font-size: 15px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Inter", serif;
+    color: #fff;
+    
+
+}
+
+.delete_All:hover{
+    background-color: #7F1D1D;
+    transform: scale(1.1);
+
+}
+
+.task_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task_table thead {
+    background-color: #E5E7EB;
+}
+
+
+.task_table th, .task_table td {
+    padding: 18px;
+}
+
+.task_table tr:hover {
+    background-color: #F3E8FF;
+}
+
+
+.custom_checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_checkbox input{
+    visibility: hidden;
+}
+
+.custom_checkbox .checkbox_indicator{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* background-color: red; */
+    border-radius: 5px;
+    border: 2px solid #14B8A6;
+    position: relative;
+
+}
+
+.custom_checkbox .checkbox_indicator::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    top: 3px;
+    left: 6px;
+    display: none;
+
+}
+
+.custom_checkbox input:checked ~.checkbox_indicator {
+    background-color: #14B8A6;
+
+
+}
+.custom_checkbox input:checked ~.checkbox_indicator::before{
+    display: block;
+}
+
+.task_table th , .task_table td{
+    text-align: start;
+}
+
+.remove_task{
+    padding: 5px 15px;
+    background-color: #EF4444;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+
+
+}
+.remove_task:hover{
+    background-color: #B91C1C;
+    color: white;
+    transform: scale(1.1);
+
+}
+
+.task_table th:nth-child(2){
+    width: 60%;
+    
+}
+
+.task_table th:nth-child(2),
+.task_table td:nth-child(2){
+    text-align: left;
+
+}
+
+
+.switch{
+    border: 1px solid #959292;
+    width: 40px;
+    height: 20px;
+    /* display: block; */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .4s;
+    cursor: pointer;
+    background-color: #6B7280
+}
+
+.switch input{
+    visibility: hidden;
+}
+
+.switch_indicator{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    position: absolute;
+    left: 5px;
+    border-radius: 50px;
+    transition: .4s;
+
+}
+
+.switch input:checked ~ .switch_indicator{
+    transform: translateX(15px);
+    background-color: #fff;
+}
+
+.switch:has(input:checked){
+    background-color: #22C55E;
+}
+.footer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #374151;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}

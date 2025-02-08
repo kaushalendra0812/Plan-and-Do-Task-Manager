@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan&Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="main_container">
+            <div class="title">
+                <h1>Plan&Do: Plan smart, do more!</h1>
+            </div>
+            <form method="get" class="task_form">
+                <input type="text" id="task_input" placeholder="Enter Task">
+                <button type="button" onclick="addTask()">Add Task</button>
+            </form>
+            <div class="task_table_header">
+                <div>
+                    <h4>My Tasks</h4>
+                </div>
+                <div class="task_action">
+                    <input type="hidden" name="" id="taskids" value="">
+                    <button type="button" class="delete_All" onclick="removeAll()">Remove All</button>
+                </div>
+            </div>
+            <table class="task_table">
+                <thead>
+                    <tr>
+                        <th>
+                            <label class="custom_checkbox">
+                                <input type="checkbox" class="select_all"  onchange="bulkSelect(event)">
+                                <span class="checkbox_indicator"></span>
+                            </label>
+                        </th>
+                        <th>Tasks</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>
+                            <label class="custom_checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox_indicator"></span>
+                            </label>
+                        </td>
+                        <td>Task Item</td>
+                        <td></td>
+                        <td>
+                            <button type="button" class="remove_task">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        Created with &#10084; by Kaushalendra
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
